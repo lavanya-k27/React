@@ -1,23 +1,45 @@
 import "./index.css"
 import Button from './Button'
+import { GoBell, GoStar,GoCheck,GoX, GoTriangleRight } from "react-icons/go";
 
 function App(){
+
+  const handleClick = () => {
+    console.log("Button clicked!");
+  }
+
+  const handleMouseOver = () => {
+    console.log("Button hovered!");
+  }
   return (
     <div>
       <div>
-        <Button primary>Buy now!</Button>
+
+        <Button primary
+         className="mb-5"
+         onClick={handleClick}>
+          <GoBell />
+          Buy now!</Button>
       </div>
       <div>
-        <Button>Click Here!</Button>
+        <Button secondary onMouseOver={handleMouseOver}>
+          <GoStar />
+          Click Here!</Button>
       </div>
       <div>
-        <Button>Add to Cart</Button>
+        <Button success>
+          <GoCheck />
+          Add to Cart</Button>
       </div>
       <div>
-        <Button>Cancel Order</Button>
+        <Button danger>
+          <GoX />
+          Cancel Order</Button>
       </div>
       <div>
-        <Button>Check Coupons</Button>
+        <Button warning>
+          <GoTriangleRight />
+          Check Coupons</Button>
       </div>
     </div>
   )
