@@ -1,48 +1,29 @@
-import "./index.css"
-import Button from './Button'
-import { GoBell, GoStar,GoCheck,GoX, GoTriangleRight } from "react-icons/go";
+import Accordion from "./components/Accordion"
 
 function App(){
 
-  const handleClick = () => {
-    console.log("Button clicked!");
-  }
+  const items = [
+    {
 
-  const handleMouseOver = () => {
-    console.log("Button hovered!");
-  }
-  return (
-    <div>
-      <div>
+      id:1,
+      label: "Can I use React in Project",
+      content:"Yes, you can use"
+    },
+    { 
+      id:2,
+       label: "Can I use JS in Project",
+      content:"Yes, you can use"
+    },
+    {
+      id:3,
+       label: "Can I use Angular in Project",
+      content:"Yes, you can use"
+    }
+  ]
 
-        <Button primary
-         className="mb-5"
-         onClick={handleClick}>
-          <GoBell />
-          Buy now!</Button>
-      </div>
-      <div>
-        <Button secondary onMouseOver={handleMouseOver}>
-          <GoStar />
-          Click Here!</Button>
-      </div>
-      <div>
-        <Button success>
-          <GoCheck />
-          Add to Cart</Button>
-      </div>
-      <div>
-        <Button danger>
-          <GoX />
-          Cancel Order</Button>
-      </div>
-      <div>
-        <Button warning>
-          <GoTriangleRight />
-          Check Coupons</Button>
-      </div>
-    </div>
-  )
+ return <div>
+  <Accordion items={items}/>
+ </div>
+  
 }
-
 export default App;
