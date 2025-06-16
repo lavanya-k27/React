@@ -1,31 +1,11 @@
-import {useState} from "react"
-import Dropdown from "./components/Dropdown"
+import Link from "./components/Link"
 
 function App(){
 
-  const [selection, setSelection] = useState(null)
-
-  const handleSelect = (option) =>{
-      setSelection(option)
-  }
-
-  const options = [
-    {
-      label:"Red",
-      value:"Red"
-    },{
-       label:"Green",
-      value:"Green"
-    },{
-      label:"Blue",
-      value:"Blue"
-    }
-  ]
-  return (
-    <div>
-      <Dropdown options={options} value={selection} onChange={handleSelect}/>
-    </div>
-  )
+  return <div>
+    <Link to={"/accordion"}>Accordion Page</Link>
+    <Link to={"/dropdown"}>Dropdown Page</Link>
+  </div>
 
 }
 export default App;
