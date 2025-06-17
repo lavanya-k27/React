@@ -4,11 +4,9 @@ import { GoBell, GoStar,GoCheck,GoX, GoTriangleRight } from "react-icons/go";
 function ButtonPage(){
 
   const handleClick = () => {
-    console.log("Button clicked!");
   }
 
   const handleMouseOver = () => {
-    console.log("Button hovered!");
   }
   return (
     <div>
